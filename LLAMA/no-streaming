@@ -1,0 +1,19 @@
+```bash
+curl --location --request POST 'https://api.llama-api.com/chat/completions' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer $LLAMA_API_KEY' \
+--data-raw '{
+    "messages": [
+        {"role": "user", "content": "What is the weather like in Boston?"}
+    ],
+    "stream": false,
+    "max_tokens": 500,
+    "temperature": 0.1,
+    "top_p": 1.0,
+    "frequency_penalty": null
+}'
+```
+
+```bash
+{"created":1732551740,"model":"llama-13b-chat","usage":{"prompt_tokens":16,"completion_tokens":533,"total_tokens":549},"choices":[{"finish_reason":"eos","index":0,"logprobs":null,"message":{"content":"Boston, Massachusetts, located in the northeastern United States, has a humid continental climate with significant seasonal variations. Here's an overview of the typical weather patterns in Boston:\n\n**Spring (March to May)**\n\n* Temperatures gradually warm up, with average highs ranging from 48°F (9°C) in March to 64°F (18°C) in May.\n* Spring is known for its unpredictable weather, with occasional snow showers and thunderstorms.\n* Average precipitation: 4-5 inches (10-13 cm) per month.\n\n**Summer (June to August)**\n\n* Summer is warm and humid, with average highs often reaching the mid-70s to low 80s (23-27°C).\n* July is usually the warmest month, with an average high of 82°F (28°C).\n* Summer is also the wettest season, with an average of 4-5 inches (10-13 cm) of precipitation per month.\n\n**Autumn (September to November)**\n\n* Autumn is generally mild, with average highs ranging from 64°F (18°C) in September to 52°F (11°C) in November.\n* The fall foliage is a popular attraction, with the changing leaves creating a picturesque landscape.\n* Average precipitation: 3-4 inches (7-10 cm) per month.\n\n**Winter (December to February)**\n\n* Winters are cold and snowy, with average temperatures ranging from 25°F (-4°C) in December to 34°F (1°C) in February.\n* Snowfall is common, with an average annual total of 43 inches (109 cm).\n* Average precipitation: 3-4 inches (7-10 cm) per month.\n\n**Other weather notes:**\n\n* Boston can experience nor'easters, which are powerful storms that bring strong winds, heavy rain, and significant snowfall.\n* The city is also prone to heatwaves during the summer, with temperatures often reaching the mid-90s (30s Celsius) for several days.\n* Boston's coastal location means it's susceptible to sea-level rise and coastal flooding, which can be a concern during heavy rainfall events or high tides.\n\nKeep in mind that these are general weather patterns, and actual conditions can vary from year to year. It's always a good idea to check current weather forecasts and conditions before planning your trip to Boston.","refusal":null,"role":"assistant","function_call":null,"tool_calls":null}}]}
+```
