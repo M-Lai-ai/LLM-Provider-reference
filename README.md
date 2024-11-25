@@ -1,4 +1,4 @@
-![Icône de l'application](https://example.com/mon_image.ico)
+![Icône de l'application](https://raw.githubusercontent.com/M-Lai-ai/logo/refs/heads/main/favicon.ico)
 # API Requests Examples for Different Providers
 
 This repository contains examples of how to make cURL requests for both streaming and non-streaming interactions with various AI providers. The following providers are covered:
