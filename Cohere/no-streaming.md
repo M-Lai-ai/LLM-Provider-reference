@@ -1,5 +1,5 @@
 ```bash
-curl -X POST 'https://api.cohere.com/v2/chat' -H 'Authorization:Bearer IfDof4Pa6u9C7k5FqUJBga02yw707ZJ4FnHk1lCq' -H 'accept:application/json' -H 'Content-Type:application/json' -d '{
+curl -X POST 'https://api.cohere.com/v2/chat' -H 'Authorization:Bearer CO_API_KEY' -H 'accept:application/json' -H 'Content-Type:application/json' -d '{
   "stream": false,
   "model": "command-r-plus-08-2024",
   "frequency_penalty": null,
