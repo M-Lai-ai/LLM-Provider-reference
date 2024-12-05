@@ -1,7 +1,6 @@
-API_KEY="YOUR_API_KEY"
-
+```shell
 curl \
-  -X POST "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyB0vKg4mbUP6W40JlUHYFFfyEETW7q6WcE" \
+  -X POST "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=GEMINI_API_KEY" \
   -H 'Content-Type: application/json' \
   -d @<(echo '{
   "contents": [
@@ -9,7 +8,7 @@ curl \
       "role": "user",
       "parts": [
         {
-          "text": "allo\n"
+          "text": "allo"
         }
       ]
     },
@@ -17,7 +16,7 @@ curl \
       "role": "model",
       "parts": [
         {
-          "text": "Hello there!\n"
+          "text": "hello how can I help you "
         }
       ]
     },
@@ -25,7 +24,7 @@ curl \
       "role": "user",
       "parts": [
         {
-          "text": "donne moi "
+          "text": "what is Coca Cola"
         }
       ]
     }
@@ -34,7 +33,7 @@ curl \
     "role": "user",
     "parts": [
       {
-        "text": "tu"
+        "text": "You are an assistant for the company Coca Cola "
       }
     ]
   },
@@ -46,3 +45,31 @@ curl \
     "responseMimeType": "text/plain"
   }
 }')
+```
+
+
+```shell
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "Coca-Cola is a carbonated soft drink sold in stores, restaurants, and vending machines worldwide.  It's produced by The Coca-Cola Company and is one of the most recognizable and widely consumed beverages globally.  Its distinctive flavor comes from a secret formula, and it's known for its refreshing taste and iconic branding.\n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "avgLogprobs": -0.08664150799022001
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 26,
+    "candidatesTokenCount": 68,
+    "totalTokenCount": 94
+  },
+  "modelVersion": "gemini-1.5-flash"
+}
+
+```
